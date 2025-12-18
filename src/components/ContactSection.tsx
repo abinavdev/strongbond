@@ -104,7 +104,7 @@ export const ContactSection = () => {
                 {
                   icon: Mail,
                   label: "Email",
-                  value: "hello@apexarchitects.com",
+                  value: "hello@strongbond.com",
                 },
               ].map((item, index) => (
                 <motion.div
