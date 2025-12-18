@@ -56,7 +56,7 @@ export const Header = () => {
             isScrolled ? "text-foreground" : "text-primary-foreground"
           )}
         >
-          APEX<span className="text-accent">.</span>
+          STRONG BOND<span className="text-accent">.</span>
         </Link>
 
         {/* Desktop Navigation */}

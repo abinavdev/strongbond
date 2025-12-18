@@ -38,7 +38,7 @@ export const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link to="/" className="font-display text-3xl font-semibold inline-block mb-6">
-              APEX<span className="text-accent">.</span>
+              STRONG BOND<span className="text-accent">.</span>
             </Link>
             <p className="text-primary-foreground/70 max-w-md mb-6">
               Creating exceptional spaces that inspire, endure, and transform the way people live and work. Your vision, our expertise.
@@ -99,8 +99,8 @@ export const Footer = () => {
                 <span className="text-xs uppercase tracking-wider text-accent block mb-1">
                   Email
                 </span>
-                <a href="mailto:hello@apexarchitects.com" className="hover:text-accent transition-colors">
-                  hello@apexarchitects.com
+                <a href="mailto:hello@strongbond.com" className="hover:text-accent transition-colors">
+                  hello@strongbond.com
                 </a>
               </li>
             </ul>
@@ -112,7 +112,7 @@ export const Footer = () => {
       <div className="border-t border-primary-foreground/10">
         <div className="container-custom py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-primary-foreground/50">
-            © {new Date().getFullYear()} Apex Architects & Engineers. All rights reserved.
+            © {new Date().getFullYear()} Strong Bond. All rights reserved.
           </p>
           <button
             onClick={scrollToTop}
