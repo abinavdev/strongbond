@@ -7,6 +7,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
+import emailjs from "@emailjs/browser";
+
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
@@ -34,36 +36,68 @@ export const ContactSection = () => {
     }));
   };
 
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
+
+  //   try {
+  //     const validatedData = contactSchema.parse(formData);
+      
+  //     // Simulate form submission
+  //     await new Promise((resolve) => setTimeout(resolve, 1000));
+      
+  //     toast({
+  //       title: "Message sent successfully!",
+  //       description: "We'll get back to you as soon as possible.",
+  //     });
+
+  //     setFormData({ name: "", email: "", phone: "", message: "" });
+  //   } catch (error) {
+  //     if (error instanceof z.ZodError) {
+  //       toast({
+  //         title: "Validation Error",
+  //         description: error.errors[0].message,
+  //         variant: "destructive",
+  //       });
+  //     } else {
+  //       toast({
+  //         title: "Something went wrong",
+  //         description: "Please try again later.",
+  //         variant: "destructive",
+  //       });
+  //     }
+  //   } finally {
+  //     setIsSubmitting(false);
+  //   }
+  // };
+
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
+  
     try {
       const validatedData = contactSchema.parse(formData);
-      
-      // Simulate form submission
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      
+  
+      await emailjs.send(
+        "service_85uqaad",        // Service ID
+        "template_hos9mzr",       // Template ID
+        validatedData,        // Form data
+        "LcNlc8SSODMpl2b1E"     // Public key
+      );
+  
       toast({
         title: "Message sent successfully!",
-        description: "We'll get back to you as soon as possible.",
+        description: "We'll get back to you soon.",
       });
-
+  
       setFormData({ name: "", email: "", phone: "", message: "" });
     } catch (error) {
-      if (error instanceof z.ZodError) {
-        toast({
-          title: "Validation Error",
-          description: error.errors[0].message,
-          variant: "destructive",
-        });
-      } else {
-        toast({
-          title: "Something went wrong",
-          description: "Please try again later.",
-          variant: "destructive",
-        });
-      }
+      toast({
+        title: "Error",
+        description: "Failed to send message.",
+        variant: "destructive",
+      });
     } finally {
       setIsSubmitting(false);
     }
