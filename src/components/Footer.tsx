@@ -10,7 +10,7 @@ const quickLinks = [
 ];
 
 const socialLinks = [
-  { icon: Instagram, href: "#", label: "Instagram" },
+  { icon: Instagram, href: "https://instagram.com/strongbond2012", label: "Instagram" },
   { icon: Facebook, href: "#", label: "Facebook" },
   { icon: Youtube, href: "#", label: "YouTube" },
 ];
@@ -38,7 +38,7 @@ export const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link to="/" className="font-display text-3xl font-semibold inline-block mb-6">
-              STRONG BOND<span className="text-accent">.</span>
+              STRONGBOND<span className="text-accent">.</span>
             </Link>
             <p className="text-primary-foreground/70 max-w-md mb-6">
               Creating exceptional spaces that inspire, endure, and transform the way people live and work. Your vision, our expertise.
@@ -84,23 +84,28 @@ export const Footer = () => {
                 <span className="text-xs uppercase tracking-wider text-accent block mb-1">
                   Address
                 </span>
-                123 Architecture Avenue,<br />
-                Design District, NY 10001
+                #204, Sathyashree Residency,<br />
+                Pandeshwara, Mangalore 575001,<br />
+                India – 682020
               </li>
               <li>
                 <span className="text-xs uppercase tracking-wider text-accent block mb-1">
                   Phone
                 </span>
-                <a href="tel:+15551234567" className="hover:text-accent transition-colors">
-                  +1 (555) 123-4567
+                <a href="tel:+918050374968" className="hover:text-accent transition-colors">
+                  +91 8050 374 968
+                </a>
+                <br />
+                <a href="tel:+919645545675" className="hover:text-accent transition-colors">
+                  +91 9645 545 675
                 </a>
               </li>
               <li>
                 <span className="text-xs uppercase tracking-wider text-accent block mb-1">
                   Email
                 </span>
-                <a href="mailto:hello@strongbond.com" className="hover:text-accent transition-colors">
-                  hello@strongbond.com
+                <a href="mailto:info.strongbond2012@gmail.com" className="hover:text-accent transition-colors">
+                  info.strongbond2012@gmail.com
                 </a>
               </li>
             </ul>
@@ -112,7 +117,7 @@ export const Footer = () => {
       <div className="border-t border-primary-foreground/10">
         <div className="container-custom py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-primary-foreground/50">
-            © {new Date().getFullYear()} Strong Bond. All rights reserved.
+            © {new Date().getFullYear()} STRONGBOND – Structural Solutions. All rights reserved.
           </p>
           <button
             onClick={scrollToTop}

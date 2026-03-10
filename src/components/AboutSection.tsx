@@ -44,7 +44,7 @@ export const AboutSection = () => {
             </h2>
             <div className="accent-line mb-8" />
             <p className="text-body mb-6">
-              At Strong Bond, we believe that great design has the power to transform lives. For over 15 years, we've been creating spaces that inspire, function beautifully, and stand the test of time.
+              At STRONGBOND – Structural Solutions, we believe that great design has the power to transform lives. For over 15 years, we've been creating spaces that inspire, function beautifully, and stand the test of time.
             </p>
             <p className="text-body mb-8">
               Our multidisciplinary team combines architectural vision with engineering precision to deliver projects that exceed expectations. From intimate residential renovations to landmark institutional buildings, we approach every project with the same dedication to excellence.
