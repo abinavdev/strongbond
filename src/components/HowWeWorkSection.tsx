@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Search, Compass, CheckCircle } from "lucide-react";
+import { revealTransition } from "@/lib/motion";
 
 const steps = [
   {
@@ -38,7 +39,7 @@ export const HowWeWorkSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={revealTransition({ duration: 0.7 })}
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="text-caption">Our Process</span>
@@ -53,7 +54,7 @@ export const HowWeWorkSection = () => {
               key={index}
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 * index }}
+              transition={revealTransition({ duration: 0.75, delay: 0.12 * index })}
               className="relative flex gap-8 pb-12 last:pb-0"
             >
               {/* Timeline line */}

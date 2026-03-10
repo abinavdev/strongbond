@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { PenTool, Building2, Palette, ClipboardList, Hammer } from "lucide-react";
+import { revealTransition } from "@/lib/motion";
 
 const services = [
   {
@@ -47,7 +48,7 @@ export const ServicesSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={revealTransition({ duration: 0.7 })}
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="text-caption">What We Do</span>
@@ -62,7 +63,7 @@ export const ServicesSection = () => {
               key={index}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.1 * index }}
+              transition={revealTransition({ duration: 0.7, delay: 0.06 * index })}
               className="group bg-background p-8 rounded-sm card-hover border border-transparent hover:border-accent/20"
             >
               <div className="w-14 h-14 rounded-sm bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent transition-colors duration-300">

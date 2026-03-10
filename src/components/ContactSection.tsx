@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
 import emailjs from "@emailjs/browser";
+import { revealTransition } from "@/lib/motion";
 
 
 const contactSchema = z.object({
@@ -111,7 +112,7 @@ export const ContactSection = () => {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6 }}
+            transition={revealTransition({ duration: 0.75 })}
           >
             <span className="text-caption">Get in Touch</span>
             <h2 className="heading-lg mt-4 mb-6 text-primary-foreground">
@@ -145,7 +146,7 @@ export const ContactSection = () => {
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
+                  transition={revealTransition({ duration: 0.6, delay: 0.15 + index * 0.08 })}
                   className="flex items-start gap-4"
                 >
                   <div className="w-12 h-12 rounded-sm bg-primary-foreground/10 flex items-center justify-center flex-shrink-0">
@@ -166,7 +167,7 @@ export const ContactSection = () => {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={revealTransition({ duration: 0.75, delay: 0.12 })}
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid sm:grid-cols-2 gap-6">

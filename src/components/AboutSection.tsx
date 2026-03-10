@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import aboutImage from "@/assets/about-team.jpg";
+import { revealTransition } from "@/lib/motion";
 
 export const AboutSection = () => {
   const ref = useRef(null);
@@ -15,7 +16,7 @@ export const AboutSection = () => {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8 }}
+            transition={revealTransition()}
             className="order-2 lg:order-1"
           >
             <div className="relative">
@@ -35,7 +36,7 @@ export const AboutSection = () => {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={revealTransition({ delay: 0.15 })}
             className="order-1 lg:order-2"
           >
             <span className="text-caption">About Us</span>
@@ -62,7 +63,7 @@ export const AboutSection = () => {
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                  transition={revealTransition({ duration: 0.6, delay: 0.25 + index * 0.08 })}
                   className="group"
                 >
                   <h4 className="font-display text-lg font-medium text-foreground group-hover:text-accent transition-colors">

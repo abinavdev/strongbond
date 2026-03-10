@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { testimonials } from "@/data/testimonials";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { revealTransition } from "@/lib/motion";
 
 export const TestimonialsSection = () => {
   const ref = useRef(null);
@@ -26,7 +27,7 @@ export const TestimonialsSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={revealTransition({ duration: 0.7 })}
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="text-caption">Testimonials</span>
@@ -38,7 +39,7 @@ export const TestimonialsSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={revealTransition({ duration: 0.75, delay: 0.12 })}
           className="max-w-5xl mx-auto"
         >
           <div className="grid lg:grid-cols-2 gap-8 items-center">

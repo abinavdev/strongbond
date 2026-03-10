@@ -5,6 +5,7 @@ import { projects } from "@/data/projects";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { revealTransition } from "@/lib/motion";
 
 const ProjectDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -44,7 +45,7 @@ const ProjectDetail = () => {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={revealTransition({ duration: 0.75 })}
             >
               <Link
                 to="/#projects"
@@ -85,7 +86,7 @@ const ProjectDetail = () => {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={revealTransition({ duration: 0.75, delay: 0.12 })}
             >
               <h2 className="heading-md mb-6">About This Project</h2>
               <div className="accent-line mb-8" />
@@ -98,7 +99,7 @@ const ProjectDetail = () => {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={revealTransition({ duration: 0.75, delay: 0.18 })}
               className="grid sm:grid-cols-3 gap-8 p-8 bg-card rounded-sm mb-12"
             >
               <div>
@@ -126,7 +127,7 @@ const ProjectDetail = () => {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+                transition={revealTransition({ duration: 0.75, delay: 0.24 })}
               >
                 <h3 className="heading-sm mb-6">Gallery</h3>
                 <div className="grid md:grid-cols-2 gap-6">
@@ -150,7 +151,7 @@ const ProjectDetail = () => {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
+              transition={revealTransition({ duration: 0.75, delay: 0.3 })}
               className="mt-16 text-center"
             >
               <p className="text-muted-foreground mb-6">

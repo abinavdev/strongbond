@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-building.jpg";
+import { revealTransition } from "@/lib/motion";
 
 export const HeroSection = () => {
   const scrollToAbout = () => {
@@ -34,7 +35,7 @@ export const HeroSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={revealTransition({ delay: 0.12 })}
           className="mb-6"
         >
           <span className="text-caption text-accent">Architects & Engineers</span>
@@ -43,7 +44,7 @@ export const HeroSection = () => {
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={revealTransition({ delay: 0.22 })}
           className="heading-xl mb-6 max-w-4xl mx-auto"
         >
           Designing Tomorrow's<br />
@@ -53,7 +54,7 @@ export const HeroSection = () => {
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={revealTransition({ delay: 0.32 })}
           className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-10"
         >
           We craft exceptional spaces that inspire, endure, and transform the way people live and work.
@@ -62,7 +63,7 @@ export const HeroSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={revealTransition({ delay: 0.42 })}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <Button variant="hero" size="xl" onClick={scrollToContact}>
@@ -86,7 +87,7 @@ export const HeroSection = () => {
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1 }}
+        transition={revealTransition({ delay: 0.55 })}
         className="absolute bottom-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-t border-border"
       >
         <div className="container-custom py-8">
@@ -114,7 +115,7 @@ export const HeroSection = () => {
       <motion.button
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 1.2 }}
+        transition={revealTransition({ duration: 0.7, delay: 0.7 })}
         onClick={scrollToAbout}
         className="absolute bottom-32 md:bottom-36 left-1/2 -translate-x-1/2 text-primary-foreground/70 hover:text-accent transition-colors animate-float"
         aria-label="Scroll to about section"

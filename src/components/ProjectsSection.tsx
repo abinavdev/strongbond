@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { projects, categories } from "@/data/projects";
 import { cn } from "@/lib/utils";
+import { revealTransition } from "@/lib/motion";
 
 export const ProjectsSection = () => {
   const ref = useRef(null);
@@ -23,7 +24,7 @@ export const ProjectsSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={revealTransition({ duration: 0.7 })}
           className="text-center max-w-3xl mx-auto mb-12"
         >
           <span className="text-caption">Portfolio</span>
@@ -35,7 +36,7 @@ export const ProjectsSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          transition={revealTransition({ duration: 0.65, delay: 0.08 })}
           className="flex flex-wrap justify-center gap-3 mb-12"
         >
           {categories.map((category) => (
@@ -61,7 +62,7 @@ export const ProjectsSection = () => {
               key={project.id}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.1 * (index % 6) }}
+              transition={revealTransition({ duration: 0.65, delay: 0.05 * (index % 6) })}
               layout
             >
               <Link
