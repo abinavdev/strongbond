@@ -1,39 +1,49 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { PenTool, Building2, Palette, ClipboardList, Hammer } from "lucide-react";
+import { PenTool, Box, Ruler, FileText, Building2, Palette, Hammer, ClipboardList } from "lucide-react";
 import { revealTransition } from "@/lib/motion";
 
 const services = [
   {
     icon: PenTool,
-    title: "Designing",
-    description:
-      "We design aesthetic spaces—residential, institutional, and commercial—to create safe, functional, sustainable environments that inspire.",
+    title: "Architectural Designs",
+    description: "Creating functional and aesthetic architectural designs."
+  },
+  {
+    icon: Box,
+    title: "3D Designs",
+    description: "Envisioning spaces with high-quality 3D models and realistic visual renderings."
+  },
+  {
+    icon: Ruler,
+    title: "Structural Design",
+    description: "Ensuring structural integrity and safety for diverse types of building projects."
+  },
+  {
+    icon: FileText,
+    title: "Documentation and Certifications",
+    description: "Managing all necessary project documentation, approvals, and legal certifications."
   },
   {
     icon: Building2,
     title: "Construction",
-    description:
-      "Our construction services bring designs to life with precision, quality craftsmanship, and strict timeline adherence.",
+    description: "Bringing designs to life with precision, quality craftsmanship, and timeline adherence."
   },
   {
     icon: Palette,
-    title: "Interior",
-    description:
-      "We design personalized, functional interiors that reflect clients' unique tastes, blending aesthetics with inspiration.",
-  },
-  {
-    icon: ClipboardList,
-    title: "PMC",
-    description:
-      "Through PMC, we oversee the complete project lifecycle, guaranteeing quality, safety, budget adherence, and on-time delivery.",
+    title: "Interior Works",
+    description: "Designing personalized, functional interiors that reflect our clients' unique tastes."
   },
   {
     icon: Hammer,
     title: "Renovation",
-    description:
-      "We specialize in renovating old structures into modern, more efficient, and visually stunning spaces.",
+    description: "Specializing in transforming and renovating old structures into modern spaces."
+  },
+  {
+    icon: ClipboardList,
+    title: "Project Management",
+    description: "Overseeing the complete project lifecycle to guarantee quality and timely delivery."
   },
 ];
 

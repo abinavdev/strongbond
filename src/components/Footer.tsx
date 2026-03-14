@@ -82,29 +82,37 @@ export const Footer = () => {
             <ul className="space-y-4 text-primary-foreground/70">
               <li>
                 <span className="text-xs uppercase tracking-wider text-accent block mb-1">
-                  Address
+                  Address 1
                 </span>
-                #204, Sathyashree Residency,<br />
-                Pandeshwara, Mangalore 575001,<br />
-                India – 682020
+                NM Ali Road, Padamughal, Kakkanad
               </li>
               <li>
-                <span className="text-xs uppercase tracking-wider text-accent block mb-1">
+                <span className="text-xs uppercase tracking-wider text-accent block mb-1 mt-4">
+                  Address 2
+                </span>
+                Thayyil Complex, First Floor,<br />
+                Pala-Vaikom Road, Kottaramattom
+              </li>
+              <li>
+                <span className="text-xs uppercase tracking-wider text-accent block mb-1 mt-4">
                   Phone
                 </span>
-                <a href="tel:+918050374968" className="hover:text-accent transition-colors">
-                  +91 8050 374 968
+                <a href="tel:+917907721684" className="hover:text-accent transition-colors">
+                  +91 79077 21684
                 </a>
                 <br />
-                <a href="tel:+919645545675" className="hover:text-accent transition-colors">
-                  +91 9645 545 675
+                <a href="tel:+918050374968" className="hover:text-accent transition-colors">
+                  +91 80503 74968
                 </a>
               </li>
               <li>
-                <span className="text-xs uppercase tracking-wider text-accent block mb-1">
+                <span className="text-xs uppercase tracking-wider text-accent block mb-1 mt-4">
                   Email
                 </span>
-                <a href="mailto:info.strongbond2012@gmail.com" className="hover:text-accent transition-colors">
+                <a href="mailto:info@strongbondstructurals.in" className="hover:text-accent transition-colors block mb-1">
+                  info@strongbondstructurals.in
+                </a>
+                <a href="mailto:info.strongbond2012@gmail.com" className="hover:text-accent transition-colors block">
                   info.strongbond2012@gmail.com
                 </a>
               </li>

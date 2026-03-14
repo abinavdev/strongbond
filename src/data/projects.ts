@@ -10,7 +10,7 @@ export interface Project {
   id: string;
   title: string;
   location: string;
-  category: "residential" | "institutional" | "religious" | "renovation" | "interior";
+  category: "residential" | "commercials" | "religious" | "renovation" | "interior";
   image: string;
   description: string;
   year: string;
@@ -45,7 +45,7 @@ export const projects: Project[] = [
     id: "innovation-center",
     title: "Innovation Center",
     location: "Austin, Texas",
-    category: "institutional",
+    category: "commercials",
     image: institutional1,
     description: "A cutting-edge educational facility designed to inspire creativity and collaboration. The open floor plan features flexible learning spaces, advanced technology infrastructure, and abundant natural light. The building achieved LEED Platinum certification for its innovative sustainability features.",
     year: "2023",
@@ -56,7 +56,7 @@ export const projects: Project[] = [
     id: "corporate-tower",
     title: "Corporate Tower",
     location: "Chicago, Illinois",
-    category: "institutional",
+    category: "commercials",
     image: institutional2,
     description: "A landmark commercial development that redefines the modern workplace. The glass curtain wall facade provides panoramic city views while an intelligent building management system optimizes energy consumption. Amenities include a rooftop terrace, fitness center, and electric vehicle charging stations.",
     year: "2024",
@@ -99,10 +99,9 @@ export const projects: Project[] = [
 ];
 
 export const categories = [
-  { id: "all", label: "All Works" },
   { id: "residential", label: "Residential" },
-  { id: "institutional", label: "Institutional" },
+  { id: "commercials", label: "Commercials" },
   { id: "religious", label: "Religious" },
-  { id: "renovation", label: "Renovations" },
+  { id: "renovation", label: "Renovation" },
   { id: "interior", label: "Interior" },
 ];

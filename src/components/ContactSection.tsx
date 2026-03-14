@@ -128,18 +128,23 @@ export const ContactSection = () => {
               {[
                 {
                   icon: MapPin,
-                  label: "Address",
-                  value: "#204, Sathyashree Residency, Pandeshwara, Mangalore 575001, India – 682020",
+                  label: "Address 1",
+                  value: "NM Ali Road, Padamughal, Kakkanad",
+                },
+                {
+                  icon: MapPin,
+                  label: "Address 2",
+                  value: "Thayyil Complex, First Floor, Pala-Vaikom Road, Kottaramattom",
                 },
                 {
                   icon: Phone,
                   label: "Phone",
-                  value: "+91 8050 374 968 / +91 9645 545 675",
+                  value: "+91 79077 21684 / +91 80503 74968",
                 },
                 {
                   icon: Mail,
                   label: "Email",
-                  value: "info.strongbond2012@gmail.com",
+                  value: "info@strongbondstructurals.in / info.strongbond2012@gmail.com",
                 },
               ].map((item, index) => (
                 <motion.div
@@ -212,7 +217,7 @@ export const ContactSection = () => {
                   type="tel"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="+91 8050 374 968"
+                  placeholder="+91 79077 21684"
                   className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/40 focus:border-accent"
                 />
               </div>

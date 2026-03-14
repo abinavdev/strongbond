@@ -93,9 +93,9 @@ export const HeroSection = () => {
         <div className="container-custom py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { value: "120+", label: "Projects Completed" },
-              { value: "15+", label: "Years Experience" },
-              { value: "50+", label: "Team Members" },
+              { value: "30+", label: "Projects Completed" },
+              { value: "5+", label: "Ongoing Projects" },
+              { value: "10+", label: "Team Members" },
               { value: "98%", label: "Client Satisfaction" },
             ].map((stat, index) => (
               <div key={index} className="text-center">

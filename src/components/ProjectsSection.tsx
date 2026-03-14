@@ -10,12 +10,9 @@ import { revealTransition } from "@/lib/motion";
 export const ProjectsSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [activeFilter, setActiveFilter] = useState("all");
+  const [activeFilter, setActiveFilter] = useState("residential");
 
-  const filteredProjects =
-    activeFilter === "all"
-      ? projects
-      : projects.filter((project) => project.category === activeFilter);
+  const filteredProjects = projects.filter((project) => project.category === activeFilter);
 
   return (
     <section id="projects" className="section-padding bg-card" ref={ref}>
