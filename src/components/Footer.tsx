@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Instagram, Facebook, Youtube, ArrowUp } from "lucide-react";
+import { Instagram, ArrowUp } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 const quickLinks = [
   { href: "#home", label: "Home" },
@@ -11,8 +12,7 @@ const quickLinks = [
 
 const socialLinks = [
   { icon: Instagram, href: "https://instagram.com/strongbond2012", label: "Instagram" },
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Youtube, href: "#", label: "YouTube" },
+  { icon: MessageCircle, href: "https://wa.me/917907721684", label: "WhatsApp" },
 ];
 
 export const Footer = () => {
